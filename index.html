@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <title>Descomplicando o Bootstrap</title>
+</head>
+
+<body class="bg-dark" data-bs-theme="dark">
+
+    <header class="container-fluid p-2 bg-black text-center navbar sticky-top">
+        <nav class="navbar container fixed-top navbar-expand-lg sticky-top bg-black" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Aprendendo Bootstrap</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#container">Containers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#formularios">Formulários</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tabelas">Tabelas</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Nav
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#navbar">.navbar</a></li>
+                                <li><a class="dropdown-item" href="#nav">.nav</a></li>
+                                <li><a class="dropdown-item" href="#navitem">.nav-item</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container mt-3 mb-3" id="inicio">
+        <h2 class="fw-bold">Documentando o aprendizado</h2>
+        <p class="fw-semibold" style="text-align: justify">Um pequeno resumo do que foi ensinado durante o modulo de
+            Bootstrap, como as classes apresentadas, suas funções e
+            algumas coisas extras que aprendi durante o processo.
+        </p>
+    </section>
+
+    <section class="container" id="container">
+        <h3>A classe .container e suas propriedades</h3>
+        <p style="text-align: justify;">
+            A classe .container possui algumas propridades em relação a disposição de elementos na tela;
+        </p>
+        <table class="container table table-striped table-hover table-bordered border-black">
+            <thead class="text-center">
+                <tr>
+                    <th>
+                        Tipo
+                    </th>
+                    <th>
+                        função
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center">
+                        <code>
+                           .container
+                        </code>
+                    </td>
+                    <td>
+                        cria um contêiner fixo e responsivo. Isso significa que a largura do contêiner será fixa para
+                        determinados pontos de interrupção (breakpoints), e o conteúdo será centralizado dentro desse
+                        contêiner. O comportamente é similar as margens de um livro ou caderno.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-center">
+                        <code>
+                            .container-fluid
+                        </code>
+                    </td>
+                    <td>
+                        cria um contêiner fluido, que se estende por toda a largura da janela do navegador. O conteúdo
+                        dentro deste contêiner se estenderá para ocupar toda a largura disponível.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <code>
+                        .container-"breakpoint"
+                    </code>
+                    </td>
+                    <td>
+                        A classe container-breakpoint (por exemplo,
+                        <code>.container-sm </code>,<code> container-md</code>,<code> container-lg</code>,<code>
+                        container-xl</code>) define um contêiner fixo para um ponto de interrupção específico. Isso permite
+                        controlar a largura do contêiner em diferentes tamanhos de tela.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="container mt-3" id="formularios">
+        <h3>Estilização de Formulários</h3>
+        <p style="text-align: justify;">
+            O Bootstrap fornece classes e estilos que facilitam a estilização de formulários,
+            tornando-os mais atraentes e responsivos. Abaixo estão algumas classes úteis para
+            estilizar elementos de formulário:
+        </p>
+        <ul>
+            <li><code>.form-control</code>: Aplica estilos básicos a campos de entrada.</li>
+            <li><code>.form-label</code>: Aplica estilos básicos aos labels do formulário.</li>
+            <li><code>.btn</code>: Estiliza botões.</li>
+            <li><code>.form-check</code>: Estiliza caixas de seleção e botões de rádio.</li>
+            <li><code>.form-group</code>: Agrupa elementos de formulário e fornece margens.</li>
+        </ul>
+
+    </section>
+
+
+    <section class="container mt-3" id="tabelas">
+        <h3>Estilização de Tabelas</h3>
+        <p style="text-align: justify;">
+            O Bootstrap oferece classes que permitem estilizar tabelas de forma rápida e fácil.
+            Algumas classes úteis para estilizar tabelas são:
+        </p>
+        <ul>
+            <li><code>.table</code>: Aplica estilos básicos a uma tabela.</li>
+            <li><code>.table-striped</code>: Adiciona listras alternadas às linhas da tabela.</li>
+            <li><code>.table-hover</code>: Adiciona um efeito de destaque nas linhas quando o mouse passa sobre elas.
+            </li>
+            <li><code>.table-bordered</code>: Adiciona bordas às células da tabela.</li>
+        </ul>
+        <table class="container table table-striped table-hover table-bordered border-black">
+            <thead class="text-center">
+                <tr>
+                    <th>
+                        Cabeçalho da tabela coluna 1 linha 1
+                    </th>
+                    <th>
+                        Cabeçalho da tabela coluna 2 linha 1
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center">
+                        <code>
+                       Coluna 1 linha 2
+                    </code>
+                    </td>
+                    <td>
+                        Coluna 2 linha 2
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-center">
+                        <code>
+                        Coluna 1 linha 3
+                    </code>
+                    </td>
+                    <td>
+                        Coluna 2 linha 3
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+    <section id="nav" class="container mt-3">
+        <h2 class="fw-bold">Elementos de Navegação (nav) do Bootstrap</h2>
+        <p class="fw-semibold" style="text-align: justify;">
+            O Bootstrap oferece classes e componentes para facilitar a criação de elementos de navegação responsivos.
+            Abaixo estão alguns dos principais elementos utilizados:
+        </p>
+
+        <ul class="fw-semibold">
+            <li id="navbar"><code>.navbar</code>: Define uma barra de navegação.</li>
+            <li id="nav"><code>.nav</code>: Define uma lista de navegação dentro da barra de navegação.</li>
+            <li id="navitem"><code>.nav-item</code>: Define um item da lista de navegação.</li>
+            <li><code>.fixed-top</code>: Fixa a barra de tarefas no topo da página enquanto se realiza o scroll da página.</li>
+            <li><code>.stick-top</code>: Faz com que o elemento ocupe 100% lateralmente da página.</li>
+        </ul>
+
+    </section>
+
+
+    <footer class="container mt-5 text-center">
+        <p>&copy; 2024 </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
